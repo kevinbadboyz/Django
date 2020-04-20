@@ -1,0 +1,17 @@
+<a href="{% url 'web_app:employee_create' %}">New Employee</a>
+<div class='main'>
+    <br/>
+    {% for object in object_list %}
+        #{{ object.id }}<br/>
+        {{ object.code }}<br/>
+        {{ object.name }}<br/>
+        {{ object.email }}<br/>
+        {{ object.phone }}<br/>
+        <a href="{% url 'web_app:employee_detail' object.id %}">Detail</a>
+        <a href="{% url 'web_app:employee_update' object.id %}">Edit</a>
+        <a href="{% url 'web_app:employee_delete' object.id %}">Delete</a>
+        <hr/>
+        {% empty %}
+        <p>No Object yet</p>        
+    {% endfor %}    
+</div>

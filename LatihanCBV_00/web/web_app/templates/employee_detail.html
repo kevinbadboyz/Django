@@ -1,0 +1,9 @@
+<h1>Profile Employee</h1>
+<p>
+    Code  : {{ object.code }}<br>
+    Name  : {{ object.name }}<br>
+    Email : {{ object.email }}<br>
+    Phone : {{ object.phone }}
+</p>
+<br>
+<a href="{% url 'web_app:employee_list' %}">Home</a>
